@@ -15,26 +15,26 @@ public class SingleRemovePage {
 		this.driver = driver;
 	}
 	
-	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[3]/input") WebElement FIRST_ITEM_CHECKBOX;
-	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[3]") WebElement FIRST_ITEM_ELEMENT;
-	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[2]/input") WebElement SECOND_ITEM_CHECKBOX;
-	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[2]/span") WebElement SECOND_ITEM_ELEMENT;
+	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[4]/input") WebElement THIRD_ITEM_CHECKBOX;
+	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[4]/span") WebElement THIRD_ITEM_ELEMENT;
+	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[4]/input") WebElement FOURTH_ITEM_CHECKBOX;
+	@FindBy(how = How.XPATH, using ="//*[@id=\"todos-content\"]/form/ul/li[1]/span[1]") WebElement FOURTH_ITEM_ELEMENT;
 	@FindBy(how = How.XPATH, using = "/html/body/div[3]/input[1]") WebElement REMOVE_BUTTON;
 	
 	public void validateFirstItem(String expectedTest) {
-		Assert.assertEquals("Item name does not match.", " 0Tabassum001 (None)", FIRST_ITEM_ELEMENT.getText());		
+		Assert.assertEquals("Item name does not match.", "Tabassum001", THIRD_ITEM_ELEMENT.getText());		
 	}
 	
 	public void checkFirstItem() {
-		FIRST_ITEM_CHECKBOX.click();		
+		THIRD_ITEM_CHECKBOX.click();		
 	}
 	
 	public void validateSecondItem(String expectedTest) {
-		Assert.assertEquals("Item name does not match.", "Tabassum002", SECOND_ITEM_ELEMENT.getText());		
+		Assert.assertEquals("Item name does not match.", "Tabassum002 (04/03/23)", FOURTH_ITEM_ELEMENT.getText());		
 	}
 	
 	public void checkSecondItem() {
-		SECOND_ITEM_CHECKBOX.click();		
+		FOURTH_ITEM_CHECKBOX.click();		
 	}
 	public void clickRemoveButton() {
 		REMOVE_BUTTON.click();		

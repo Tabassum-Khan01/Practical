@@ -13,8 +13,8 @@ public class SingleRemoveTest {
 	
 	WebDriver driver;
 	
-	String firstItem = " 0Tabassum001 (None)";
-	String secondItem = "Tabassum002";
+	String thirdItem = "Tabassum001";
+	String fourthItem = "Tabassum002 (04/03/23)";
 	
 	@Test
 	public void userShouldBeAbleToRemoveItem() {
@@ -22,11 +22,11 @@ public class SingleRemoveTest {
 		
 		SingleRemovePage singleRemovePage = PageFactory.initElements(driver, SingleRemovePage.class);				
 		
-		singleRemovePage.validateFirstItem(firstItem);
+		singleRemovePage.validateFirstItem(thirdItem);
 		singleRemovePage.checkFirstItem();
-		singleRemovePage.validateSecondItem(secondItem);
+		singleRemovePage.validateSecondItem(fourthItem);
 		singleRemovePage.checkSecondItem();
-	//	singleRemovePage.clickRemoveButton();
+		//singleRemovePage.clickRemoveButton();
 	}
 
 }
